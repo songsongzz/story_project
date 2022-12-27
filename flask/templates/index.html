@@ -1,0 +1,117 @@
+<meta charset="utf-8" />
+<html>
+  <head>
+    <title>체험형 동화 구연</title>
+  </head>
+  <link href="/static/css/index.css" rel="stylesheet"  />
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script src="/static/js/index.js"></script>
+  <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+   <!-- Include the core CSS, this is needed by the grid -->
+   <link rel="stylesheet"
+     href="https://unpkg.com/ag-grid-community/styles/ag-grid.css"/>
+   <!-- Include the theme CSS, only need to import the theme you are going to use -->
+   <link rel="stylesheet"
+     href="https://unpkg.com/ag-grid-community/styles/ag-theme-alpine.css"/>
+
+  <script> 
+    jQuery(document).ready(function(){ 
+        load_body();
+    });
+    </script>
+  <body><div class="area" id="area"></div>
+    
+    <nav class="main-menu">
+            <ul>
+                <li>
+                    <a href="javascript:get_body('/userinfo')">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            User
+                        </span>
+                    </a>
+                  
+                </li>
+                <li class="has-subnav">
+                    <a href="javascript:get_body('/groupinfo')">
+                        <i class="fa fa-laptop fa-2x"></i>
+                        <span class="nav-text">
+                            Group
+                        </span>
+                    </a>
+                    
+                </li>
+                <li class="has-subnav">
+                    <a href="javascript:get_body('/gitinfo')">
+                       <i class="fa fa-list fa-2x"></i>
+                        <span class="nav-text">
+                            Git
+            
+                        </span>
+                    </a>
+                    
+                </li>
+                <li class="has-subnav">
+                    <a href="javascript:get_body('/gitdetailinfo')">
+                       <i class="fa fa-folder-open fa-2x"></i>
+                        <span class="nav-text">
+                            Git Details
+                        </span>
+                    </a>
+                   
+                </li>
+                <!-- li>
+                    <a href="#">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Graphs and Statistics
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-font fa-2x"></i>
+                        <span class="nav-text">
+                           Quotes
+                        </span>
+                    </a>
+                </li>
+                <li>
+                   <a href="#">
+                       <i class="fa fa-table fa-2x"></i>
+                        <span class="nav-text">
+                            Tables
+                        </span>
+                    </a>
+                </li>
+                <li>
+                   <a href="#">
+                        <i class="fa fa-map-marker fa-2x"></i>
+                        <span class="nav-text">
+                            Maps
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                       <i class="fa fa-info fa-2x"></i>
+                        <span class="nav-text">
+                            Documentation
+                        </span>
+                    </a>
+                </li -->
+            </ul>
+
+            <ul class="logout">
+                <li>
+                   <a href="#">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>  
+            </ul>
+        </nav>
+  </body>
+    </html>

@@ -1,0 +1,895 @@
+#usda 1.0
+(
+    customLayerData = {
+        dictionary audioSettings = {
+            double dopplerLimit = 1
+            double dopplerScale = 1
+            string enableDistanceDelay = "off"
+            string enableDoppler = "off"
+            string enableInterauralDelay = "off"
+            double nonSpatialTimeScale = 1
+            double spatialTimeScale = 1
+            double speedOfSound = 340
+        }
+        dictionary cameraSettings = {
+            dictionary Front = {
+                double3 position = (-3726.823241582328, 1072.2451722750948, 50000)
+                double radius = 136931.0625
+            }
+            dictionary Perspective = {
+                double3 position = (-12597.659881083957, -3545.930053918067, 1067.958988035245)
+                double3 target = (-5334.328219151865, 740.2920637042748, -735.2525734851581)
+            }
+            dictionary Right = {
+                double3 position = (-50000, 0, -1.1102230246251565e-11)
+                double radius = 500
+            }
+            dictionary Top = {
+                double3 position = (-4.329780281177466e-12, 50000, 1.1102230246251565e-11)
+                double radius = 500
+            }
+            string boundCamera = "/World/Cameras/CamMorning_RowHouse"
+        }
+        dictionary omni_layer = {
+            string authoring_layer = "./World_BrownstoneDemopack_Morning(20Gb).usd"
+            dictionary muteness = {
+                bool "./Options/Options_CamerasExterior.usd" = 0
+            }
+        }
+        dictionary renderSettings = {
+            bool "rtx:directLighting:sampledLighting:autoEnable" = 0
+            bool "rtx:directLighting:sampledLighting:enabled" = 1
+            bool "rtx:ecoMode:enabled" = 1
+            int "rtx:externalFrameCounter" = 1
+            int "rtx:pathtracing:maxBounces" = 8
+            int "rtx:pathtracing:maxSpecularAndTransmissionBounces" = 10
+            bool "rtx:pathtracing:ptfog:ZUp" = 1
+            double "rtx:pathtracing:ptfog:asymmetry" = -0.07000000029802322
+            float3 "rtx:pathtracing:ptfog:color" = (0.95780593, 0.8394552, 0.69107515)
+            double "rtx:pathtracing:ptfog:density" = 0.3499999940395355
+            bool "rtx:pathtracing:ptfog:enabled" = 1
+            double "rtx:pathtracing:ptfog:falloff" = 1000
+            double "rtx:pathtracing:ptfog:height" = 1
+            int "rtx:pathtracing:totalSpp" = 10000
+            int "rtx:post:dlss:execMode" = 0
+            bool "rtx:post:histogram:enabled" = 1
+            double "rtx:post:lensFlares:flareScale" = 3
+            double "rtx:post:lensFlares:sensorDiagonal" = 5
+            bool "rtx:post:tvNoise:enableFilmGrain" = 0
+            bool "rtx:post:tvNoise:enableVignetting" = 1
+            bool "rtx:post:tvNoise:enabled" = 1
+            double "rtx:post:tvNoise:vignettingSize" = 20
+            double "rtx:post:tvNoise:vignettingStrength" = 0.05000000074505806
+            float3 "rtx:sceneDb:ambientLightColor" = (0.556962, 0.45860416, 0.37365803)
+            double "rtx:sceneDb:ambientLightIntensity" = 0.20000000298023224
+            bool "rtx:scenedb:skipMostLights" = 1
+        }
+    }
+    defaultPrim = "World"
+    doc = """Generated from Composed Stage of root layer d:\\01.dev\\2022\\03.metaverse\\flask\\a.usd
+"""
+    endTimeCode = 600
+    metersPerUnit = 0.009999999776482582
+    startTimeCode = 0
+    timeCodesPerSecond = 24
+    upAxis = "Z"
+)
+
+def Xform "World"
+{
+    rel material:binding
+
+    def Xform "Cameras"
+    {
+        double3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+        over "CamMorning_Demopack"
+        {
+            float focalLength = 24
+            float focusDistance = 3000
+            float fStop = 3
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.791314
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (70, -4.558794995537853e-15, -90.5)
+            double3 xformOp:scale = (0.9999981085459466, 1.0000038822492003, 0.9999994794527766)
+            double3 xformOp:translate = (-11069.505873873133, 1281.7499997615814, 2632.0833308696747)
+        }
+
+        over "CamMorning_AlleyBack"
+        {
+            float focalLength = 23.1
+            float focusDistance = 3050
+            float fStop = 2
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.791314
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (96.05936431884767, -7.1048248252030106e-9, -133.13743591308594)
+            double3 xformOp:scale = (1.0000019073486328, 1.0000039339065552, 0.9999989867210388)
+            double3 xformOp:translate = (1233.6079871508002, 2067.7515363208477, 400.6589628628063)
+        }
+
+        over "CamMorning_RowHouse"
+        {
+            float focalLength = 26
+            float focusDistance = 2900
+            float fStop = 2
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            custom uniform vector3d omni:kit:centerOfInterest = (0, 0, -6891.415424338593)
+            float verticalAperture = 11.791314
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (103.19831848144531, 0.0000025627200520369395, -134.82896423339844)
+            double3 xformOp:scale = (1.0000004768371582, 1.0000044107437134, 0.9999972581863403)
+            double3 xformOp:translate = (-6227, 3245, 123.088482)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        }
+
+        over "CamMorning_StreetEnd"
+        {
+            float focalLength = 24
+            float focusDistance = 3050
+            float fStop = 2
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.791314
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (67.00772094726565, 0.000007333659166688913, -57.73631668090826)
+            double3 xformOp:scale = (1.0000022649765015, 1.000004768371582, 0.9999989271163943)
+            double3 xformOp:translate = (-7049.582431792929, 2070.563205853033, 1978.5765176888665)
+        }
+
+        over "CamMorning_StreetTree"
+        {
+            float focalLength = 16
+            float focusDistance = 2900
+            float fStop = 1
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.789763
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (98.40429687500003, -0.0000030503749663788872, -90.58953857421875)
+            double3 xformOp:scale = (1.0000009536743164, 1.000003695487976, 0.9999979734420776)
+            double3 xformOp:translate = (-7615.185639694808, -182.7833357334137, 117.08074728104597)
+        }
+
+        over "CamPark_StreetLight"
+        {
+            float focalLength = 22
+            float focusDistance = 2500
+            float fStop = 1
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.785673
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (89.74755859375004, -0.00001148526644078415, 39.48731994628907)
+            double3 xformOp:scale = (0.999999463558197, 1.0000007152557373, 0.9999963641166687)
+            double3 xformOp:translate = (-8366.905392, -2659.4179110000023, 237.57746499999982)
+        }
+
+        over "CamPark_Water"
+        {
+            float focalLength = 18.147562
+            float focusDistance = 8000
+            float fStop = 1
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.785673
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (75.18115234375003, -0.000009326607137437786, -47.95373535156252)
+            double3 xformOp:scale = (0.9999993443489075, 0.9999998211860657, 1.0000003576278687)
+            double3 xformOp:translate = (-12265.887302, -3549.743718, 1000.033583)
+        }
+
+        over "CamPark_Seating"
+        {
+            float focalLength = 20
+            float focusDistance = 1000
+            float fStop = 2
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.785673
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (91.63436126708987, -0.000006129147140720918, -166.06565856933588)
+            double3 xformOp:scale = (1.0000007152557373, 1.0000038146972656, 0.9999995231628418)
+            double3 xformOp:translate = (-10751.700779, 5574.19108, 156.346625)
+        }
+
+        over "CamPark_Demopack"
+        {
+            float focalLength = 18.147562
+            float focusDistance = 0
+            float fStop = 0
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.77716
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (45, -6.361109437179021e-15, 90)
+            double3 xformOp:scale = (1, 1.0000003576278687, 1.0000003576278687)
+            double3 xformOp:translate = (-400, 1000, 8500)
+        }
+
+        over "CamPark_Grove"
+        {
+            float focalLength = 18
+            float focusDistance = 900
+            float fStop = 1
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.785673
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (91.26696777343753, 0.000006101642612679121, -48.90823745727541)
+            double3 xformOp:scale = (0.9999987483024599, 1.000003457069397, 0.9999965429306034)
+            double3 xformOp:translate = (-10860.035717000004, 600.9708419999997, 162.65755200000103)
+        }
+
+        over "CamNight_Alley"
+        {
+            float focalLength = 24
+            float focusDistance = 2450
+            float fStop = 1
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.791314
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (100, -3.816665617756143e-14, 144.40000000000146)
+            double3 xformOp:scale = (1.000002741813688, 1.0000050067901611, 0.9999979138374329)
+            double3 xformOp:translate = (-2423, 4041, 322)
+        }
+
+        over "CamNight_Demopack"
+        {
+            float focalLength = 18.147562
+            float focusDistance = 8100
+            float fStop = 0.1
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.791314
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (64.8678207397461, -0, -50.60593795776368)
+            double3 xformOp:scale = (0.9999999999999991, 0.9999999999999994, 0.9999999999999993)
+            double3 xformOp:translate = (-16286.086792943262, -5685.7084060306515, 3934.9806741851967)
+        }
+
+        over "CamNight_Backyard"
+        {
+            float focalLength = 18
+            float focusDistance = 0
+            float fStop = 0
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.791314
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (90, -6.36110936292704e-15, 90)
+            double3 xformOp:scale = (1.0000029802322388, 1.0000029802322388, 0.9999979734420776)
+            double3 xformOp:translate = (-1330.49748000002, -189, 480.1494010000024)
+        }
+
+        over "CamNight_StreetCorner"
+        {
+            float focalLength = 24
+            float focusDistance = 4200
+            float fStop = 2
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.791314
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (70.38597106933594, 0.00001521840378762118, -122.59510803222656)
+            double3 xformOp:scale = (1.0000019073486328, 1.0000050067901611, 0.9999964237213277)
+            double3 xformOp:translate = (-8505.98106599995, 1229, 2155.9857020000054)
+        }
+
+        over "CamNight_SideStreet"
+        {
+            float focalLength = 18
+            float focusDistance = 2450
+            float fStop = 0.5
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.791314
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (67.12613677978516, 0.00001049681667204469, 63.83920669555664)
+            double3 xformOp:scale = (1.000002145767212, 1.000003457069397, 0.9999977946281433)
+            double3 xformOp:translate = (-192, -3256.098092, 2566.9680570000783)
+        }
+
+        over "CamLite_Demopack"
+        {
+            float focalLength = 18
+            float focusDistance = 2450
+            float fStop = 0.5
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.791314
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (67.12613677978523, 0.000010496816672044737, 63.839206695556676)
+            double3 xformOp:scale = (1.0000021457672124, 1.0000034570693974, 0.999997794628144)
+            double3 xformOp:translate = (-192, -3256.098092000001, 2566.9680569999987)
+        }
+
+        over "CamLite_ParkWide"
+        {
+            float focalLength = 24
+            float focusDistance = 8100
+            float fStop = 0.1
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.791314
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (65.55535125732422, -6.36110936292704e-15, -90)
+            double3 xformOp:scale = (1, 1.0000005960464478, 0.9999995231628418)
+            double3 xformOp:translate = (-18304, 1406, 4430)
+        }
+
+        over "CamLite_East"
+        {
+            float focalLength = 50
+            float focusDistance = 0
+            float fStop = 0
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.791314
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (49.50631087256863, 0.0000046055737262163544, 153.04349457251672)
+            double3 xformOp:scale = (1, 1, 1)
+            custom matrix4d xformOp:transform = ( (-0.8913509022816299, 0.4533139850056683, -8.038242546581918e-8, 0), (-0.2943659680959477, -0.5788114172807224, 0.7604774947705012, 0), (0.34473503713527753, 0.6778523247904102, 0.6493642890917053, 0), (6771.954525, 30743.882193, 28296.557685, 1) )
+            double3 xformOp:translate = (6771.954525, 30743.882193, 28296.557685)
+        }
+
+        over "CamLite_North"
+        {
+            float focalLength = 50
+            float focusDistance = 0
+            float fStop = 0
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.791314
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (47.099896737501695, -0.000019213197473965694, -132.18552673938393)
+            double3 xformOp:scale = (1, 1, 1)
+            custom matrix4d xformOp:transform = ( (-0.6715334361699434, -0.7409742533352129, 3.3533355575655263e-7, 0), (0.5043977808293462, -0.45712752877229346, 0.7325416719429463, 0), (-0.5427943651146534, 0.49192639523902354, 0.680722189198296, 0), (-21454.36370099988, 12768.363575000316, 16382.529674000107, 1) )
+            double3 xformOp:translate = (-21454.36370099988, 12768.363575000316, 16382.529674000107)
+        }
+
+        over "CamLight_Plan"
+        {
+            float focalLength = 200
+            float focusDistance = 0
+            float fStop = 0
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.773726
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (0, 0, -90)
+            double3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-9681.682248000056, 988.7819100000197, 156333.9919809997)
+        }
+
+        over "CamBrownstone_Demopack"
+        {
+            float focalLength = 18.147562
+            float focusDistance = 0
+            float fStop = 0
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.791319
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (70.79, -0.000004389372415932225, -53.33000000000001)
+            double3 xformOp:scale = (1.0000001192092896, 1.0000003576278687, 0.9999998807907104)
+            double3 xformOp:translate = (-7197.63, -2981.66, 1861.07)
+        }
+
+        over "CamBrownstone_Chandelier"
+        {
+            float focalLength = 24
+            float focusDistance = 2300
+            float fStop = 0.8
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.795978
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (89.3197021484375, -0.000008614752910308353, 67.27770233154298)
+            double3 xformOp:scale = (0.9999991655349731, 1.0000016689300537, 1.000001072883606)
+            double3 xformOp:translate = (-1574.055395, -1273.000605, 524.104333)
+        }
+
+        over "CamBrownstone_Facade"
+        {
+            float focalLength = 76
+            float focusDistance = 2000
+            float fStop = 1.5
+            float horizontalAperture = 83.83816
+            float horizontalApertureOffset = 0
+            float verticalAperture = 47.19413
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (90, -1.2722218874358041e-14, -90)
+            double3 xformOp:scale = (1.0000020265579224, 1.0000009536743164, 1)
+            double3 xformOp:translate = (-6569, -202.46164399999907, 412.1764689999982)
+        }
+
+        over "CamBrownstone_TiltFront"
+        {
+            float focalLength = 43
+            float focusDistance = 9900
+            float fStop = 0.05
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.791319
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (65.64522552490246, 0.00002442691589923687, -53.865566253662195)
+            double3 xformOp:scale = (0.9999986290931707, 1.0000008344650275, 0.9999997019767771)
+            double3 xformOp:translate = (-11863.546523000028, -6346.4249880000525, 4754.541823999961)
+        }
+
+        over "CamBrownstone_TiltBack"
+        {
+            float focalLength = 41
+            float focusDistance = 8600
+            float fStop = 0.05
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.791319
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (65.64523315429693, 0.000017460426539182188, 126.13442230224612)
+            double3 xformOp:scale = (0.9999989271163943, 1.0000009536743164, 1)
+            double3 xformOp:translate = (2963.192680000003, 4622.320303999999, 4349.822790999999)
+        }
+
+        over "CamBrownstone_Entrance"
+        {
+            float focalLength = 20
+            float focusDistance = 1020
+            float fStop = 0.6
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.795978
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (92.11222839355469, -0.0000010951788343243761, -35.71599197387698)
+            double3 xformOp:scale = (1.0000017881393433, 1.0000004768371582, 0.9999998807907104)
+            double3 xformOp:translate = (-5299.046221, -1419, 247.353967)
+        }
+
+        over "CamBrownstone_Backside"
+        {
+            float focalLength = 18.147562
+            float focusDistance = 2300
+            float fStop = 0.8
+            float horizontalAperture = 20.955
+            float horizontalApertureOffset = 0
+            float verticalAperture = 11.795978
+            float verticalApertureOffset = 0
+            double3 xformOp:rotateXYZ = (96.99999999999999, -0.000012982134624492554, 121.19405364990234)
+            double3 xformOp:scale = (0.999999463558197, 1.0000003576278687, 1.0000001192092896)
+            double3 xformOp:translate = (-1319.575055, 746.916808, 351)
+        }
+    }
+
+    def Xform "Lights"
+    {
+        token visibility = "invisible"
+        double3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+        def RectLight "Brownstone02_RectLight_01" (
+            apiSchemas = ["ShapingAPI"]
+        )
+        {
+            float colorTemperature = 4500
+            bool enableColorTemperature = 1
+            float exposure = 3
+            float height = 118
+            float intensity = 15000
+            float shaping:cone:angle = 180
+            float shaping:cone:softness
+            float shaping:focus
+            color3f shaping:focusTint
+            asset shaping:ies:file
+            token visibility = "inherited"
+            float width = 38
+            double3 xformOp:rotateXYZ = (0, 0, 0) (
+                customData = {
+                    dictionary omni = {
+                        dictionary kit = {
+                            dictionary property = {
+                                dictionary usd = {
+                                    float2 soft_range_ui = (0, 0)
+                                }
+                            }
+                        }
+                    }
+                }
+            )
+            double3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-4637.67441, 122.787825, 547.584359)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        }
+
+        def RectLight "Brownstone03_RectLight_01" (
+            apiSchemas = ["ShapingAPI"]
+        )
+        {
+            float colorTemperature = 3500
+            bool enableColorTemperature = 1
+            float exposure = 0 (
+                customData = {
+                    dictionary omni = {
+                        dictionary kit = {
+                            dictionary property = {
+                                dictionary usd = {
+                                    float2 soft_range_ui = (0, 0)
+                                }
+                            }
+                        }
+                    }
+                }
+            )
+            float height = 60
+            float intensity = 15000
+            float shaping:cone:angle = 180
+            float shaping:cone:softness
+            float shaping:focus
+            color3f shaping:focusTint
+            asset shaping:ies:file
+            token visibility = "inherited"
+            float width = 60
+            double3 xformOp:rotateXYZ = (0, 0, 0) (
+                customData = {
+                    dictionary omni = {
+                        dictionary kit = {
+                            dictionary property = {
+                                dictionary usd = {
+                                    float2 soft_range_ui = (0, 0)
+                                }
+                            }
+                        }
+                    }
+                }
+            )
+            double3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-4584.545817, -362.139922, 1403.800842)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        }
+
+        def RectLight "Brownstone02_RectLight_03" (
+            apiSchemas = ["ShapingAPI"]
+        )
+        {
+            float colorTemperature = 4500
+            bool enableColorTemperature = 1
+            float exposure = 4.4
+            float height = 118
+            float intensity = 15000
+            float shaping:cone:angle = 180
+            float shaping:cone:softness
+            float shaping:focus
+            color3f shaping:focusTint
+            asset shaping:ies:file
+            token visibility = "inherited"
+            float width = 38
+            double3 xformOp:rotateXYZ = (0, 0, 0) (
+                customData = {
+                    dictionary omni = {
+                        dictionary kit = {
+                            dictionary property = {
+                                dictionary usd = {
+                                    float2 soft_range_ui = (0, 0)
+                                }
+                            }
+                        }
+                    }
+                }
+            )
+            double3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-4647.292568, 324.097561, 1168.474488)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        }
+
+        def RectLight "Brownstone03_RectLight_02" (
+            apiSchemas = ["ShapingAPI"]
+        )
+        {
+            float colorTemperature = 3500
+            bool enableColorTemperature = 1
+            float exposure = 0 (
+                customData = {
+                    dictionary omni = {
+                        dictionary kit = {
+                            dictionary property = {
+                                dictionary usd = {
+                                    float2 soft_range_ui = (0, 0)
+                                }
+                            }
+                        }
+                    }
+                }
+            )
+            float height = 50
+            float intensity = 15000
+            float shaping:cone:angle = 180
+            float shaping:cone:softness
+            float shaping:focus
+            color3f shaping:focusTint
+            asset shaping:ies:file
+            token visibility = "inherited"
+            float width = 50
+            double3 xformOp:rotateXYZ = (0, 0, 0) (
+                customData = {
+                    dictionary omni = {
+                        dictionary kit = {
+                            dictionary property = {
+                                dictionary usd = {
+                                    float2 soft_range_ui = (0, 0)
+                                }
+                            }
+                        }
+                    }
+                }
+            )
+            double3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-4582.253192, -626.197585, 1010.173538)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        }
+
+        def RectLight "Brownstone02_RectLight_04" (
+            apiSchemas = ["ShapingAPI"]
+        )
+        {
+            float colorTemperature = 4500
+            bool enableColorTemperature = 1
+            float exposure = 3
+            float height = 115
+            float intensity = 15000
+            float shaping:cone:angle = 180
+            float shaping:cone:softness
+            float shaping:focus
+            color3f shaping:focusTint
+            asset shaping:ies:file
+            token visibility = "inherited"
+            float width = 38
+            double3 xformOp:rotateXYZ = (0, 0, 0) (
+                customData = {
+                    dictionary omni = {
+                        dictionary kit = {
+                            dictionary property = {
+                                dictionary usd = {
+                                    float2 soft_range_ui = (0, 0)
+                                }
+                            }
+                        }
+                    }
+                }
+            )
+            double3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-3557.770409, 74.783247, 860)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        }
+
+        def RectLight "Brownstone01_RectLight_01" (
+            apiSchemas = ["ShapingAPI"]
+        )
+        {
+            float colorTemperature = 4500
+            bool enableColorTemperature = 1
+            float exposure = 3
+            float height = 118
+            float intensity = 15000
+            float shaping:cone:angle = 180
+            float shaping:cone:softness
+            float shaping:focus
+            color3f shaping:focusTint
+            asset shaping:ies:file
+            token visibility = "inherited"
+            float width = 38
+            double3 xformOp:rotateXYZ = (0, 0, 0) (
+                customData = {
+                    dictionary omni = {
+                        dictionary kit = {
+                            dictionary property = {
+                                dictionary usd = {
+                                    float2 soft_range_ui = (0, 0)
+                                }
+                            }
+                        }
+                    }
+                }
+            )
+            double3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-3260.463123, -1238.226503, 681.388237)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        }
+
+        def RectLight "Brownstone01_RectLight_02" (
+            apiSchemas = ["ShapingAPI"]
+        )
+        {
+            float colorTemperature = 4500
+            bool enableColorTemperature = 1
+            float exposure = 0
+            float height = 120
+            float intensity = 15000
+            float shaping:cone:angle = 180
+            float shaping:cone:softness
+            float shaping:focus
+            color3f shaping:focusTint
+            asset shaping:ies:file
+            token visibility = "inherited"
+            float width = 20
+            double3 xformOp:rotateXYZ = (0, 0, 0) (
+                customData = {
+                    dictionary omni = {
+                        dictionary kit = {
+                            dictionary property = {
+                                dictionary usd = {
+                                    float2 soft_range_ui = (0, 0)
+                                }
+                            }
+                        }
+                    }
+                }
+            )
+            double3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-3192.24684, -1355.361238, 1053.023665)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        }
+
+        def RectLight "Brownstone01_RectLight_03" (
+            apiSchemas = ["ShapingAPI"]
+        )
+        {
+            float colorTemperature = 4500
+            bool enableColorTemperature = 1
+            float exposure = 1 (
+                customData = {
+                    dictionary omni = {
+                        dictionary kit = {
+                            dictionary property = {
+                                dictionary usd = {
+                                    float2 soft_range_ui = (0, 0)
+                                }
+                            }
+                        }
+                    }
+                }
+            )
+            float height = 50
+            float intensity = 15000
+            float shaping:cone:angle = 180
+            float shaping:cone:softness
+            float shaping:focus
+            color3f shaping:focusTint
+            asset shaping:ies:file
+            token visibility = "inherited"
+            float width = 50
+            double3 xformOp:rotateXYZ = (0, 0, 0) (
+                customData = {
+                    dictionary omni = {
+                        dictionary kit = {
+                            dictionary property = {
+                                dictionary usd = {
+                                    float2 soft_range_ui = (0, 0)
+                                }
+                            }
+                        }
+                    }
+                }
+            )
+            double3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (-4622.122297, -935.500067, 682.244413)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        }
+    }
+
+    over "References"
+    {
+        over "Reference_Brownstone5Row_Yard"
+        {
+            over "Reference_Brownstone5Row"
+            {
+                over "Reference_Brownstone02_01"
+                {
+                    over "Brownstone02_Referenced"
+                    {
+                        over "Brownstone02_Origin"
+                        {
+                            over "Brownstone02"
+                            {
+                                custom double DayOfYear = 119
+                                custom double EndTOD = 18
+                                custom double Latitude = 42.359
+                                custom double Longitude = -71.057
+                                custom double NorthOrientation = 0
+                                custom double StartTOD = 6
+                                custom double TimeOfDay = 8.265727699530517
+                                custom double Year = 2020
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+def "Environment"
+{
+    def Xform "sky_CloudySky"
+    {
+        double DayOfYear = 100
+        custom double EndTOD = 18
+        double Latitude = 51.426
+        double Longitude = -0.985
+        double NorthOrientation = 11.85
+        custom double StartTOD = 16.005633802816902
+        double TimeOfDay = 15.995555555555555
+        float3 xformOp:rotateZYX = (90, 0, 0)
+        custom double Year = 2020
+
+        over "AxisNorth"
+        {
+            double3 xformOp:rotateZYX = (0, 0, 0)
+
+            over "AxisLatitude"
+            {
+                double3 xformOp:rotateZYX = (0, 0, 42.359)
+
+                over "AxisSHA"
+                {
+                    double3 xformOp:rotateZYX = (235.30343153588495, 0, 0)
+
+                    over "AxisDeclination"
+                    {
+                        double3 xformOp:rotateZYX = (0, 0, 14.496314581114996)
+
+                        over "DistantLight"
+                        {
+                            color3f color = (1, 0.98, 0.95)
+                            float intensity = 5000
+                        }
+                    }
+                }
+            }
+
+            over "AxisAzimuth"
+            {
+                double3 xformOp:rotateZYX = (0, -103.17626687334653, 0)
+
+                over "AxisElevation"
+                {
+                    double3 xformOp:rotateZYX = (0, 0, 35.162128875201866)
+                }
+            }
+        }
+
+        over "DomeLight"
+        {
+            float3 xformOp:rotateZYX = (270, 0, 0)
+        }
+
+        over "Looks"
+        {
+            over "SkyMaterial"
+            {
+                over "Shader"
+                {
+                    float inputs:Azimuth = -103.17627
+                    float inputs:DayOfYear = 119
+                    float inputs:Declination = 14.496315
+                    float inputs:Elevation = 35.16213
+                    float inputs:Latitude = 42.359
+                    float inputs:Longitude = -71.057
+                    float inputs:NorthOrientation = 0
+                    float inputs:SHA = -55.303432
+                    float inputs:TimeOfDay = 8.265728
+                }
+            }
+        }
+    }
+}
+
